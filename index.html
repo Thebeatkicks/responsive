@@ -12,23 +12,21 @@
     <title>Resposive Dark with burgerMenu</title>
 </head>
 <body>
-    <header>
-        <div class="nav" id="nav-bar">
-            <h3 class="logo active">Head.</h3>
-            <a href="#news">Works</a>
-            <a href="#contact">Services</a>
-            <a href="#about">Contracts</a>
-            <a class="icon" onclick="burgerMenu()">
-            <i class="fa fa-bars"></i></a>
-            
-        </div>
-
-       
-    </header> 
+    <div class="nav" id="nav-bar">
+        <a href="#home" class="active" style="font-size: 24px;">Head.</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a class="icon" onclick="burgerMenu()">
+        <i class="fa fa-bars"></i></a>
+    </div>
+    
+        
+    
     <main>
         <div class="wrapper">
             <div class="card_left">
-                <h2 class="title">Musican</h2>
+                <h2 class="title">Musican</h2> 
                 <p class="content">
                     Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. 
                     Donec viverra eleifend lacus, vitae ullamcor. 
@@ -39,6 +37,15 @@
             </div>
         </div>
     </main>
-
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-bar");
+            if (burger.className === "nav") {
+            burger.className += " responsive";
+            } else {
+            burger.className = "nav";
+            }
+        }
+        </script>
 </body>
 </html>
